@@ -1,0 +1,88 @@
+.preloader {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 999;
+    animation-name: disable;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.34,.58,.69,.80);
+    animation-fill-mode: forwards;
+    
+    
+    
+    &__name {
+        overflow: hidden;
+        height: 9rem;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        color: #fff;
+        font-family: monospace;
+        font-size: 8.2rem;
+        letter-spacing: .5rem;
+        animation-name: name;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        
+        
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 100%;
+            height: .5rem;
+            background-color: #fff;
+            animation-name: line;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-delay: 1s;
+            width: 100%;
+            transform: translateX(110%);
+        }
+    }
+}
+
+@keyframes disable {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: collapse;
+    }
+}
+
+@keyframes name {
+    0% {
+        opacity: 0
+    }
+    
+    50% {
+        opacity: .8;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes line {
+    0% {
+        width: 0;
+        transform: translateX(0);
+    }
+    
+    70% {
+        width: 100%;
+        transform: translateX(0);
+    }
+    
+    100% {
+        transform: translateX(100%);
+    }
+}

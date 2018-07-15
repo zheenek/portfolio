@@ -1,0 +1,82 @@
+.col {
+    height: 33.5rem;
+    margin-bottom: 3rem;
+    @include respond(tab-port) {
+        height: 18.9rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.col-md-6 {
+    height: 33.5rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include respond(tab-land) {
+        height: 25rem;
+        margin-bottom: 2rem;
+    }
+
+    &:hover .photo-container--button {
+        bottom: 1.6rem;
+    }
+}
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+
+    &--name {
+        color: #fff;
+        font-family: "NATS", Helvetica, sans-serif;
+        background-color: $main-black;
+        position: absolute;
+        left: 1.4rem; top: 1.4rem;
+        letter-spacing: 1.5px;
+        padding: .5rem 1.6rem .5rem .8rem;
+        font-size: 1.8rem;
+        
+        &--nextLine {
+            position: absolute;
+            top: 3.3rem; left: 0;
+            background-color: $main-black;
+            padding: .5rem 1.6rem .5rem .8rem;
+        }
+    }
+    
+    &--button {
+        position: absolute;
+        @include centering-x;
+        bottom: -5rem;
+        border: 0;
+        background-color: $main-black;
+        color: #fff;
+        padding: .6rem 2.4rem;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 500;
+        font-size: 1.4rem;
+        letter-spacing: 1.5px;
+        -webkit-transition: background-color .3s ease;
+        -o-transition: background-color .3s ease;
+        transition: background-color .3s ease, bottom .3s ease;
+        @include respond(tab-land) {
+            bottom: 1.6rem;
+        }
+        
+        &:hover {
+            background-color: #222;
+        }
+    }
+}
+
+.image-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,97 @@
+.navi {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 7rem;
+    padding: 0 10%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba($black, .07);
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    z-index: 800;
+    @include respond(tab-port) {
+        padding: 0 4%;
+    }
+    
+    &__icon {
+        list-style: none;
+        
+        &--link {
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            background-color: #fff;
+            @include centering-y;
+            right: 1.5rem;
+            
+            &--bar {
+                width: 2.7rem;
+                height: 2px;
+                background-color: $main-black;
+                position: absolute;
+                @include centering-y;
+                @include respond(tab-port) {
+                    -webkit-transform: scale(.9);
+                    -ms-transform: scale(.9);
+                    -o-transform: scale(.9);
+                    transform: scale(.9);
+                }
+                
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 2.7rem;
+                    height: 2px;
+                    background-color: inherit;
+                    position: absolute;
+                    bottom: 8px;
+                }
+                
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 2.7rem;
+                    height: 2px;
+                    background-color: inherit;
+                    position: absolute;
+                    top: 8px;
+                }
+            }
+        }
+    }
+    
+    &__logo {
+        position: relative;
+        padding-left: 1.5rem;
+        width: 20rem;
+        box-sizing: border-box;
+        @include respond(tab-port) {
+            padding-left: 0rem;
+            -webkit-transform: scale(.8);
+            -ms-transform: scale(.8);
+            -o-transform: scale(.8);
+            transform: scale(.8);
+        }
+    }
+    
+    &__menu {
+        position: relative;
+        height: 7rem;
+        width: 7rem;
+        box-sizing: border-box;
+        
+        &__button {
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            @include centering;
+            z-index: 1;
+        }
+    }
+}

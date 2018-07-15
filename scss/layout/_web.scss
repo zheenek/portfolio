@@ -1,0 +1,7 @@
+.web {
+    width: 80%;
+    margin: 0 auto;
+    @include respond(tab-port) {
+        width: 90%;
+    }
+}
