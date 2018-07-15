@@ -22,4 +22,4 @@ $web.waypoint(function(direction) {
         $webLink.removeClass('linkWhite');
         $designLink.removeClass('linkBlack');
     }
-}, {offset: '50%'});
+}, {offset: '50rem'});
