@@ -1,0 +1,15 @@
+-webkit-transform: ;
+-ms-transform: ;
+-o-transform: ;
+transform: ;
+
+-webkit-transition: prop time;
+-o-transition: prop time;
+transition: prop time;
+
+-webkit-box-shadow: inset hoff voff blur color;
+box-shadow: inset hoff voff blur color;
+
+-webkit-filter: ;
+-o-filter: ;
+filter: ;
