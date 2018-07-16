@@ -4,11 +4,11 @@
     @include centering;
     width: 100vw;
     height: 100%;
-    background-color: $main-black;
     z-index: 949;
     overflow: hidden;
     opacity: 0;
     visibility: collapse;
+      
     
     &__content {
         position: absolute;
@@ -68,6 +68,14 @@
     font-family: "NATS", sans-serif;
     font-size: 2rem;
     letter-spacing: 2px;
+}
+
+.bg {
+    position: absolute;
+    left: 0; top: 0;
+    height: 200vh;
+    width: 100%;
+    background-color: $main-black;
 }
 
 /***************************************
