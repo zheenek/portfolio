@@ -29,6 +29,10 @@ body {
   width: 100%;
   padding-top: 7rem; }
 
+.noScroll {
+  height: 100vh;
+  overflow: hidden; }
+
 .section-name {
   width: 100%;
   text-align: center;

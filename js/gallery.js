@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var $body = $(document.body);
     var $back = $('.closeLink'),
         $openModalWindow = $('.photo-container--button');
     var $modalWindow = $('#open');
@@ -8,15 +9,18 @@ $(document).ready(function() {
     $back.on('click', function() {
         $modalWindow.addClass('backTo'); 
         $modalWindow.removeClass('openModal');
+        $body.removeClass('noScroll');
     });
     
     $openModalWindow.on('click', function() {
         $modalWindow.addClass('openModal');
         $modalWindow.removeClass('backTo');
+        $body.addClass('noScroll');
     });
     
     $button.on('click', function(e) {
         var target = $(e.target);
+        $body.addClass('noScroll');
         
         if(target.is('.0')) {
             $image.css('background-image', 'url(./img/design/design.jpg)');
