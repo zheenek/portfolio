@@ -1,0 +1,21 @@
+.backToTop {
+    position: fixed;
+    right: 5%; bottom: 10%;
+    font-size: 2rem;
+    padding: .4rem 1.5rem;
+    opacity: 0;
+    visibility: collapse;
+    background-color: $main-black;
+    color: #fff;
+    -webkit-clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+    -webkit-transition: clip-path .3s ease, color .3s ease, opacity .3s ease;
+    -o-transition: clip-path .3s ease, color .3s ease, opacity .3s ease;
+    transition: clip-path .3s ease, color .3s ease, opacity .3s ease;
+    
+    &:hover {
+        color: #e5e5e5;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}

@@ -2,8 +2,9 @@
     position: fixed;
     left: 0; top: 0;
     @include centering;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 100%;
+    background-color: $main-black;
     z-index: 949;
     overflow: hidden;
     opacity: 0;
@@ -12,24 +13,30 @@
     &__content {
         position: absolute;
         width: 100%;
-        height: 100vh;
+        max-height: 100vh;
+        min-height: 100vh;
         @include centering;
-        background-image: url(../img/design/cblf.png);
-        background-size: cover;
-        background-position: bottom;
+        background-position: center;
+        background-size: contain;
         background-repeat: no-repeat;
+        @include respond(small-phone) {
+            min-height: 40vh;
+            max-height: 100vh;
+            width: 100%;
+        }
     }
 }
 
 .closeLink {
-    position: absolute;
-    top: 3rem; left: 2rem;
+    position: relative;
+    top: 3rem; left: 2.4rem;
     font-size: 4rem;
     background-color: #fff;
-    width: 1.8rem;
-    height: 2px;
     z-index: 959;
     cursor: pointer;
+    text-shadow: 0 0 .5rem rgba($main-black,.6);
+    box-shadow: 0 0 .5rem rgba($main-black,.6);
+    -webkit-box-shadow: 0 0 .5rem rgba($main-black,.6);
     
     &::after {
         content: '';
@@ -39,6 +46,7 @@
         height: 2px;
         background-color: inherit;
         transform: rotate(40deg);
+        box-shadow: inherit;
     }
     
     &::before {
@@ -49,13 +57,14 @@
         height: 2px;
         background-color: inherit;
         transform: rotate(140deg);
+        box-shadow: inherit;
     }
 }
 
 .back {
     color: #fff;
     position: absolute;
-    left: 3rem; top: -1.4rem;
+    left: 2.5rem; top: -1.41rem;
     font-family: "NATS", sans-serif;
     font-size: 2rem;
     letter-spacing: 2px;
@@ -92,7 +101,7 @@
 }
 
 @keyframes closeModal {
-    0% {}
+    0% {opacity: 1; visibility: visible;}
     
     100% {
         opacity: 0;
