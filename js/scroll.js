@@ -1,6 +1,7 @@
 var $web = $('#web');
 var $webLink = $('#web-link'),
     $designLink = $('#design-link');
+var $backbtn = $('.backToTop');
 
 $web.waypoint(function(direction) {
     if(direction == 'down') {
@@ -23,3 +24,14 @@ $web.waypoint(function(direction) {
         $designLink.removeClass('linkBlack');
     }
 }, {offset: '50rem'});
+
+$(window).on('scroll', function() {
+    var wn = $(window).scrollTop();
+    if (wn > 500) {
+        $backbtn.css('visibility', 'visible');
+        $backbtn.css('opacity', '1');
+    } else {
+        $backbtn.css('visibility', 'collapse');
+        $backbtn.css('opacity', '0');
+    }
+});
