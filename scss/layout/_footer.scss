@@ -26,6 +26,7 @@
         @include respond(tab-port) {
             flex-direction: column-reverse;
             justify-content: center;
+            width: 90%;
         }
         
         &__left {

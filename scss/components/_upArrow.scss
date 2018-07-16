@@ -12,6 +12,7 @@
     -webkit-transition: clip-path .3s ease, color .3s ease, opacity .3s ease;
     -o-transition: clip-path .3s ease, color .3s ease, opacity .3s ease;
     transition: clip-path .3s ease, color .3s ease, opacity .3s ease;
+    z-index: 900;
     
     &:hover {
         color: #e5e5e5;
