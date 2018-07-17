@@ -79,6 +79,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: default;
   overflow: hidden; }
   .photo-container--name {
     color: #fff;
@@ -112,6 +113,7 @@ body {
     font-weight: 500;
     font-size: 1.4rem;
     letter-spacing: 1.5px;
+    cursor: pointer;
     -webkit-transition: background-color .3s ease;
     -o-transition: background-color .3s ease;
     transition: background-color .3s ease, bottom .3s ease; }
@@ -346,6 +348,7 @@ body {
 .open {
   position: fixed;
   left: 0;
+  top: 0;
   bottom: 0;
   left: 50%;
   top: 50%;
@@ -382,41 +385,22 @@ body {
 
 .closeLink {
   position: relative;
-  top: 3rem;
+  top: 2.4rem;
   left: 2.4rem;
-  font-size: 4rem;
-  background-color: #fff;
+  font-size: 2rem;
+  color: #fff;
   z-index: 999;
   cursor: pointer;
-  text-shadow: 0 0 0.5rem rgba(23, 23, 23, 0.6);
-  box-shadow: 0 0 0.5rem rgba(23, 23, 23, 0.6);
-  -webkit-box-shadow: 0 0 0.5rem rgba(23, 23, 23, 0.6); }
-  .closeLink::after {
-    content: '';
-    position: absolute;
-    left: -.1rem;
-    top: .3rem;
-    width: 1rem;
-    height: 2px;
-    background-color: inherit;
-    transform: rotate(40deg);
-    box-shadow: inherit; }
-  .closeLink::before {
-    content: '';
-    position: absolute;
-    left: -.1rem;
-    top: -.3rem;
-    width: 1rem;
-    height: 2px;
-    background-color: inherit;
-    transform: rotate(140deg);
-    box-shadow: inherit; }
+  text-shadow: 0 0 0.5rem rgba(23, 23, 23, 0.6); }
+
+.fa-angle-left {
+  color: #fff; }
 
 .back {
   color: #fff;
   position: absolute;
   left: 2.5rem;
-  top: -1.41rem;
+  top: -.1rem;
   font-family: "NATS", sans-serif;
   font-size: 2rem;
   letter-spacing: 2px; }

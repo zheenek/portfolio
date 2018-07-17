@@ -30,6 +30,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: default;
     overflow: hidden;
 
     &--name {
@@ -62,6 +63,7 @@
         font-weight: 500;
         font-size: 1.4rem;
         letter-spacing: 1.5px;
+        cursor: pointer;
         -webkit-transition: background-color .3s ease;
         -o-transition: background-color .3s ease;
         transition: background-color .3s ease, bottom .3s ease;

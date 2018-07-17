@@ -1,6 +1,6 @@
 .open {
     position: fixed;
-    left: 0; bottom: 0;
+    left: 0; top: 0; bottom: 0;
     @include centering;
     width: 100vw;
     height: 100%;
@@ -29,42 +29,22 @@
 
 .closeLink {
     position: relative;
-    top: 3rem; left: 2.4rem;
-    font-size: 4rem;
-    background-color: #fff;
+    top: 2.4rem; left: 2.4rem;
+    font-size: 2rem;
+    color: #fff;
     z-index: 999;
     cursor: pointer;
     text-shadow: 0 0 .5rem rgba($main-black,.6);
-    box-shadow: 0 0 .5rem rgba($main-black,.6);
-    -webkit-box-shadow: 0 0 .5rem rgba($main-black,.6);
-    
-    &::after {
-        content: '';
-        position: absolute;
-        left: -.1rem; top: .3rem;
-        width: 1rem;
-        height: 2px;
-        background-color: inherit;
-        transform: rotate(40deg);
-        box-shadow: inherit;
-    }
-    
-    &::before {
-        content: '';
-        position: absolute;
-        left: -.1rem; top: -.3rem;
-        width: 1rem;
-        height: 2px;
-        background-color: inherit;
-        transform: rotate(140deg);
-        box-shadow: inherit;
-    }
+}
+
+.fa-angle-left {
+    color: #fff;
 }
 
 .back {
     color: #fff;
     position: absolute;
-    left: 2.5rem; top: -1.41rem;
+    left: 2.5rem; top: -.1rem;
     font-family: "NATS", sans-serif;
     font-size: 2rem;
     letter-spacing: 2px;
