@@ -20,6 +20,7 @@ $(document).ready(function() {
     
     $button.on('click', function(e) {
         var target = $(e.target);
+        $body.removeClass('noScroll');
         
         if(target.is('.0')) {
             $image.css('background-image', 'url(./img/design/design.jpg)');
@@ -35,7 +36,6 @@ $(document).ready(function() {
             $image.css('background-image', 'url(./img/design/hd.jpg)');
         } else {
             $modalWindow.removeClass('openModal');
-            $body.removeClass('noScroll');
         }
     });
 });
