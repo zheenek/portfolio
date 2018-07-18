@@ -20,7 +20,6 @@ $(document).ready(function() {
     
     $button.on('click', function(e) {
         var target = $(e.target);
-        $body.addClass('noScroll');
         
         if(target.is('.0')) {
             $image.css('background-image', 'url(./img/design/design.jpg)');
