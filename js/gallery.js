@@ -1,14 +1,13 @@
 $(document).ready(function() {
     var $body = $(document.body);
     var $back = $('.closeLink'),
-        $openModalWindow = $('.modalBtn');
+        $openModalWindow = $('.photo-container--button');
     var $modalWindow = $('#open');
     var $button = $('.photo-container--button');
     var $image = $('.open__content');
     
     $back.on('click', function() {
-        $modalWindow.addClass('backTo'); 
-        $modalWindow.removeClass('openModal');
+        $modalWindow.addClass('backTo').removeClass('openModal');; 
         $body.removeClass('noScroll');
     });
     
