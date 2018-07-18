@@ -36,6 +36,9 @@ $(document).ready(function() {
         } else if (target.is('.5')) {
             $image.css('background-image', 'url(./img/design/hd.jpg)');
             openModal();
-        } else {}
+        } else {
+            $modalWindow.addClass('backTo').removeClass('openModal');; 
+            $body.removeClass('noScroll');
+        }
     });
 });
