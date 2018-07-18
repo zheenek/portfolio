@@ -36,6 +36,7 @@ $(document).ready(function() {
             $image.css('background-image', 'url(./img/design/hd.jpg)');
         } else {
             $modalWindow.removeClass('openModal');
+            $body.removeClass('noScroll');
         }
     });
 });
