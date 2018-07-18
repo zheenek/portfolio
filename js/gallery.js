@@ -34,6 +34,8 @@ $(document).ready(function() {
             $image.css('background-image', 'url(./img/design/player.png)');
         } else if (target.is('.5')) {
             $image.css('background-image', 'url(./img/design/hd.jpg)');
+        } else {
+            $modalWindow.hide();
         }
     });
 });
