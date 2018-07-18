@@ -35,7 +35,7 @@ $(document).ready(function() {
         } else if (target.is('.5')) {
             $image.css('background-image', 'url(./img/design/hd.jpg)');
         } else {
-            $modalWindow.hide();
+            $modalWindow.removeClass('openModal');
         }
     });
 });
