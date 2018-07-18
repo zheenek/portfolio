@@ -366,7 +366,6 @@ body {
     transform: translate(-50%, -50%);
     width: 80%;
     height: 95%;
-    background-color: #fff;
     opacity: 0;
     visibility: collapse;
     overflow: hidden; }
@@ -470,7 +469,7 @@ body {
 
 .showMenuBox {
   animation-name: showMenuBox;
-  animation-duration: 1s;
+  animation-duration: .8s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards; }
 
