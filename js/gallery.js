@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var $body = $(document.body);
     var $back = $('.closeLink'),
-        $openModalWindow = $('.photo-container--button');
+        $openModalWindow = $('.modalBtn');
     var $modalWindow = $('#open');
     var $button = $('.photo-container--button');
     var $image = $('.open__content');
