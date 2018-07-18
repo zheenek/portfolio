@@ -3,7 +3,6 @@ $(document).ready(function() {
     var $back = $('.closeLink'),
         $openModalWindow = $('.photo-container--button');
     var $modalWindow = $('#open');
-    var $button = $('.photo-container--button');
     var $image = $('.open__content');
     
     $back.on('click', function() {
@@ -11,15 +10,10 @@ $(document).ready(function() {
         $body.removeClass('noScroll');
     });
     
-    $openModalWindow.on('click', function() {
-        $modalWindow.addClass('openModal');
-        $modalWindow.removeClass('backTo');
-        $body.addClass('noScroll');
-    });
-    
-    $button.on('click', function(e) {
+    $openModalWindow.on('click', function(e) {
         var target = $(e.target);
-        $body.removeClass('noScroll');
+        $modalWindow.addClass('openModal').removeClass('backTo');
+        $body.addClass('noScroll');
         
         if(target.is('.0')) {
             $image.css('background-image', 'url(./img/design/design.jpg)');
@@ -33,8 +27,6 @@ $(document).ready(function() {
             $image.css('background-image', 'url(./img/design/player.png)');
         } else if (target.is('.5')) {
             $image.css('background-image', 'url(./img/design/hd.jpg)');
-        } else {
-            $modalWindow.removeClass('openModal');
-        }
+        } else {}
     });
 });
