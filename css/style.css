@@ -569,9 +569,9 @@ body {
         width: 100%; } }
 
 .closeLink {
-  position: relative;
+  position: absolute;
   top: 3rem;
-  left: 0rem;
+  left: 2.4rem;
   font-size: 2rem;
   color: #fff;
   z-index: 999;
