@@ -21,20 +21,39 @@
     </div>   
     -->
     
+    
+    <!-- MODAL WINDOW -->
     <div id="open" class="open">
         <a class="closeLink"><i class="fas fa-angle-left"></i><span class="back">Back</span></a>
         <div class="open__content"></div>
     </div>
+    <!-- MODAL WINDOW END -->
     
+    
+    <!-- NAVIGATION -->
     <div class="navi">
         <div class="navi__logo"><img src="img/eugene.png" alt="Eugene."></div>
         <div class="navi__menu">
             <ul class="navi__icon">
-                <a href="#" class="navi__icon--link"><li class="navi__icon--link--bar"></li></a>
+                <a id="menuBars" class="navi__icon--link"><li class="navi__icon--link--bar"></li></a>
             </ul>
         </div>
     </div>
     
+    <div id="menu" class="menu">
+        <div class="menu__content">
+            <a id="menuClose" class="menu__content__close"><span class="menu__content__close--cross"></span></a>
+            <ul class="menu__content__links">
+                <li class="menu__content__links__item"><a href="index.html" class="menu__content__links__item--link">Portfolio</a></li>
+                <li class="menu__content__links__item"><a href="pages/about.html" class="menu__content__links__item--link">About me</a></li>
+                <li class="menu__content__links__item"><a href="pages/contact.html" class="menu__content__links__item--link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- NAVIGATION END -->
+    
+    
+    <!-- SIDE SLIDE -->
     <div class="sections-nav">
         <div class="sections-nav__content">
             <div class="sections-nav__content--rectangle rect"></div>
@@ -48,7 +67,10 @@
             </ul>
         </div>
     </div>
+    <!-- SIDE SLIDE END -->
     
+    
+    <!-- PAGE CONTENT -->
     <div id="design" class="design">
         <h1 class="section-name">DESIG<span class="nospace">N</span></h1>
         
@@ -200,14 +222,12 @@
                     <li class="footer__content__right__social__icon"><a href="https://vk.com/great_zheenek" class="footer__content__right__social__icon--link" open target="_blank"><i class="fab fa-vk"></i></a></li>
                     <li class="footer__content__right__social__icon"><a href="https://www.facebook.com/profile.php?id=100004598326267" class="footer__content__right__social__icon--link" open target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="footer__content__right__social__icon"><a href="mailto:zheenek2000@gmail.com" class="footer__content__right__social__icon--link" open target="_blank"><i class="fas fa-envelope"></i></a></li>
-                    <br>
-                    <li class="footer__content__right__social__icon"><a href="tel:+375293654517" class="footer__content__right__social__icon--link">+375 (29) 365-45-17</a></li>
                 </ul>
                 
             </div>
         </div>
     </div>
-    
+    <!-- PAGE CONTENT END -->
    
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -216,6 +236,7 @@
     <script src="js/jquery.waypoints.min.js"></script>
     
     <!-- My Scripts -->
+    <script src="js/menu.js"></script>
     <script src="js/slide.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/gallery.js"></script>

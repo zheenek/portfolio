@@ -1,0 +1,212 @@
+.menu {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 950;
+    background-color: rgba(33,33,33,.5);
+    opacity: 0;
+    visibility: collapse;
+    
+    &__content {
+        position: absolute;
+        @include centering;
+        width: 80%;
+        height: 95%;
+        background-color: #fff;
+        opacity: 0;
+        visibility: collapse;
+        overflow: hidden;
+        @include respond(tab-port) {
+            width: 100%;
+            height: 100%;
+        }
+        
+        &__close {
+            position: absolute;
+            right: 2.4rem; top: 2.4rem;
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+            
+            &--cross {
+                position: absolute;
+                @include centering-y;
+                background-color: #000;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 2rem;
+                    height: 2px;
+                    background-color: inherit;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0rem;
+                    width: 2rem;
+                    height: 2px;
+                    background-color: inherit;
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        
+        
+        &__links {
+            position: absolute;
+            @include centering;
+            list-style: none;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            width: 60%;
+            @include respond(tab-port) {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            &__item {
+                text-align: center;
+                @include respond(tab-port) {
+                    height: 6rem;
+                }
+                
+                &--link {
+                    position: relative;
+                    color: $main-black;
+                    font-size: 3rem;
+                    font-family: "NATS", sans-serif;
+                    letter-spacing: 1px;
+                    padding: 0 1.4rem;
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0; bottom: 0;
+                        width: 0%;
+                        height: 2px;
+                        background-color: $main-black;
+                        -webkit-transition: width .4s cubic-bezier(.31,.01,.68,.96);
+                        -o-transition: width .4s cubic-bezier(.31,.01,.68,.96);
+                        transition: width .4s cubic-bezier(.31,.01,.68,.96);
+                    }
+                    
+                    &:hover {
+                        color: inherit;
+                        text-decoration: none;
+                        
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.showMenu {
+    animation-name: showMenu;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.showMenuBox {
+    animation-name: showMenuBox;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.hideMenu {
+    animation-name: hideMenu;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.hideBox {
+    animation-name: hideBox;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showMenu {
+    0% {
+        opacity: 0; 
+        visibility: collapse;
+        background-color: rgba(33,33,33,0);
+    }
+    
+    100% {
+        opacity: 1;
+        visibility: visible;
+        background-color: #fff;
+        background-color: rgba(33,33,33, .5);
+    }
+}
+
+@keyframes showMenuBox {
+    0% {}
+    
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    60% {
+        background-color: transparent;
+    }
+    
+    95% {
+        box-shadow: 0 0 0 35rem inset #fff,
+            0 0 0 45rem inset #fff,
+            0 0 0 50rem inset #fff;
+    }
+
+    100% {
+        box-shadow: 0;
+        background-color: #fff;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes hideMenu {
+    0% {
+        opacity: 1; 
+        visibility: visible;
+        background-color: rgba(33,33,33,.5);
+    }
+    
+    100% {
+        opacity: 0;
+        visibility: collapse;
+        background-color: rgba(33,33,33,0);
+    }
+}
+
+@keyframes hideBox {
+    0% {background-color: #fff; opacity: 1; visibility: visible;}
+    100% {opacity: 0; visibility: collapse; background-color: #fff;}
+}
