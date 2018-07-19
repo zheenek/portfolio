@@ -27,6 +27,14 @@ $(document).ready(function() {
             $image.css('background-image', 'url(./img/design/player.png)');
         } else if (target.is('.5')) {
             $image.css('background-image', 'url(./img/design/hd.jpg)');
+        } else if (target.is('.6')) {
+            $image.css('background-image', 'url(./img/design/targets.jpg)');
+        } else if (target.is('.7')) {
+            $image.css('background-image', 'url(./img/design/dada.jpg)');
+        } else if (target.is('.8')) {
+            $image.css('background-image', 'url(./img/design/trend.jpg)');
+        } else if (target.is('.9')) {
+            $image.css('background-image', 'url(./img/design/reg.jpg)');
         }
     });
 });
